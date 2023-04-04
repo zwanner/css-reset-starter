@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>CSS Reset Activity</title>
+        <meta name="author" content="Prof. Barnett">
+        <meta name="description" content="On this page we will learn about and use the CSS Reset code, which helps correct for inconsistencies in browser stylesheets">
+
+        <!-- link to stylesheet -->
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <h1>CSS Reset Activity</h1>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <h2>What CSS Reset Does</h2>
+            <p>The code that makes up the <a href="https://meyerweb.com/eric/tools/css/reset/">CSS Reset</a> was written by Eric Meyer and can be found on his website (you can also view it on this page below). The CSS Reset targets the margin, padding, and borders of the elements on your page, in addition to list styles and font sizes. Many of these settings vary from browser to browser, and removing them can allow you more control over the way your website appears to your users.</p>
+            <p>To use the CSS Reset, you simply paste it into your CSS file before writing any CSS. It should be pasted at the very top, and any custom styles that you write would be added underneath it. As we will see in class today, adding it after writing CSS will break the original display of your page and requires adding new styles that you may not have planned on adding. There's also a good chance that the Reset would remove some styles that you had to adjust manually, so adding it first saves time during development.</p>
+
+            <section id="form">
+                <h3>Form Element Styles</h3>
+                <p>Compare the form you see after adding the CSS Reset to the form in the screenshot provided. Note any differences between the two, and think about which styles you might need to apply to correct the way those elements are displaying.</p>
+                <form action="https://wp.zybooks.com/form-viewer.php" method="POST" target="_blank">
+                    <label for="full-name">Full Name (first and last): <span class="required">*</span></label>
+                    <input type="text" name="full-name" id="full-name" required>
+            
+                    <label for="email">Email Address (address@site.com): <span class="required">*</span></label>
+                    <input type="email" name="email" id="email" required>
+
+                    <label for="my-phone">Phone Number: <span class="required">*</span></label>
+                    <input type="tel" name="my-phone" id="my-phone" required>
+
+                    <fieldset>
+                        <legend>Preferred Method of Contact: <span class="required">*</span></legend>
+
+                        <input type="radio" name="contact-pref" id="pref-email" checked>
+                        <label for="pref-email">Email</label>
+                        
+                        <input type="radio" name="contact-pref" id="pref-phone">
+                        <label for="pref-phone">Phone</label>
+                    </fieldset>
+
+                    <label for="my-comments">Comments: <span class="required">*</span></label>
+                    <textarea name="my-comments" id="my-comments"></textarea>
+
+                    <input type="submit" name="my-submit" id="my-submit" value="Submit the Form">
+                </form>
+            </section>
+
+            <section id="image">
+                <h3>Image Styles</h3>
+                <p>The tags used to wrap the image below and the information about its source are figure and figcapture tags. These are used to markup images like this, where you have an image and related text that describes it or gives credit to the photographer.</p>
+                <figure>
+                    <img src="images/arizona-sunset.jpg" alt="a sunset paints the sky in shades of orange, red, and gray, with mountains silhouetted in the distance and saguaro cacti silhouetted in the foreground">
+                    <figcaption>
+                        Photo by <a href="https://unsplash.com/@masonrfield?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Mason Field</a> on <a href="https://unsplash.com/photos/VJNVw8Pxq5g?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+                    </figcaption>
+                </figure>
+            </section>
+
+            <section id="code">
+                <h3>The CSS Reset Code</h3>
+                <p>You can find the code for the CSS Reset below. It's just placed in two columns to keep this page from being too long. It is also inside of <code>pre</code> and <code>code</code> tags to preserve formatting. Code inside of those tags will only contain characters that are valid to use in code (not the kinds of apostrophes and quotation marks that cause issues in HTML and CSS).</p>
+                <pre>
+                    <code>
+                        <div>
+<!--                     -->/* 
+<!--                     -->    http://meyerweb.com/eric/tools/css/reset/ 
+<!--                     -->    v2.0 | 20110126
+<!--                     -->    License: none (public domain)
+<!--                    -->*/
+
+<!--                     -->html, body, div, span, applet, object, iframe,
+<!--                     -->h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+<!--                     -->a, abbr, acronym, address, big, cite, code,
+<!--                     -->del, dfn, em, img, ins, kbd, q, s, samp,
+<!--                     -->small, strike, strong, sub, sup, tt, var,
+<!--                     -->b, u, i, center,
+<!--                     -->dl, dt, dd, ol, ul, li,
+<!--                     -->fieldset, form, label, legend,
+<!--                     -->table, caption, tbody, tfoot, thead, tr, th, td,
+<!--                     -->article, aside, canvas, details, embed, 
+<!--                     -->figure, figcaption, footer, header, hgroup, 
+<!--                     -->menu, nav, output, ruby, section, summary,
+<!--                     -->time, mark, audio, video {
+<!--                     -->    margin: 0;
+<!--                     -->    padding: 0;
+<!--                     -->    border: 0;
+<!--                     -->    font-size: 100%;
+<!--                     -->    font: inherit;
+<!--                     -->    vertical-align: baseline;
+<!--                    -->}
+                        </div>  
+                        <div>
+
+
+
+
+
+                            
+<!--                    -->/* HTML5 display-role reset for older browsers */
+<!--                    -->article, aside, details, figcaption, figure, 
+<!--                    -->footer, header, hgroup, menu, nav, section {
+<!--                    -->    display: block;
+<!--                    -->}
+<!--                    -->body {
+<!--                    -->    line-height: 1;
+<!--                    -->}
+<!--                    -->ol, ul {
+<!--                    -->    list-style: none;
+<!--                    -->}
+<!--                    -->blockquote, q {
+<!--                    -->    quotes: none;
+<!--                    -->}
+<!--                    -->blockquote:before, blockquote:after,
+<!--                    -->q:before, q:after {
+<!--                    -->    content: '';
+<!--                    -->    content: none;
+<!--                    -->}
+<!--                    -->table {
+<!--                    -->    border-collapse: collapse;
+<!--                    -->    border-spacing: 0;
+<!--                    -->}
+                        </div>
+                    </code>
+                </pre>
+            </section>
+        </main>
+        <footer>
+            <p>Copyright &copy;2023 - GIT215 - Prof. Barnett</p>
+        </footer>
+    </body>
+</html>
